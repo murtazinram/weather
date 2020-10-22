@@ -4,9 +4,7 @@ const weatherDescription = document.querySelector('.description')
 const city = document.querySelector('.city')
 
 async function getWeather(){
-    const url = 'http://api.openweathermap.org/data/2.5/weather?q='
-        .concat(city.textContent)
-        .concat(',lang=ru&APPID=ca70759849f15aeca11bb59253ad6332&units=metric')
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=ru&appid=ca70759849f15aeca11bb59253ad6332&units=metric`;
     const res = await fetch(url)
     const data = await res.json()
 
